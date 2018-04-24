@@ -36,3 +36,7 @@ When we have a genuine one to many relationship e.g. person to city, true linkin
 }
 ```
 
+## Benefits of embedding
+* Improved read performance.
+* Once round trip to the DB.
+
