@@ -27,6 +27,8 @@ In a replica set, any writes are done via the primary server and saved into the 
 
 The secondaries uses a *tail* command to open a cursor on the *oplog* file and they then process the next command as it comes.
 
+_Note:_ The oplog uses a capped collection. 
+
 ## Getting started
 
 >start mongod --dbpath fresh --replSet r1 --oplogSize 1
@@ -75,6 +77,15 @@ To view the replica set's configuration, issue the following command:
 >rs.reconfig(cfg)
 
 This command will reconfigure the replica set with a given configuration document.
+
+## Write Concern Specification
+
+Write concern can include the following fields:
+
+{ w: <value>, j: <boolean>, wtimeout: <number> }
+- the w option to request acknowledgement that the write operation has propagated to a specified number of mongod instances or to mongod instances with specified tags.
+- the j option to request acknowledgement that the write operation has been written to the journal
+- the wtimeout option to specify a time limit to prevent write operations from blocking indefinitely.
 
 ## Runtime status
 >rs.status()
