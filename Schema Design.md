@@ -4,11 +4,13 @@ In MongoDB we attempt to describe the data in a way thats its used by the applic
 
 *Note:* It's important to remember there is no support for transactions in MongoDB, however we do have _atomic operations_.
 
-## Atomic Operations
-This means that when you work on a single document, that the work will be completed before anyone else sees the document ie. they see *all* the changes you make or *none*.
-
 ## Living without constraints
 MongoDB doesn't allow for foreign key constraints, so if an application requires that data is held in 2 separate tables then this behavior must be guaranteed by developers.
+
+## Living without transactions
+
+### Atomic Operations
+This means that when you work on a single document, that the work will be completed before anyone else sees the document ie. they see *all* the changes you make or *none*.
 
 ## How to we build for transaction-like capabilities?
 1. Restructure<br>
