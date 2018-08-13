@@ -9,6 +9,8 @@ MongoDB doesn't allow for foreign key constraints, so if an application requires
 
 ## Living without transactions
 
+** <b>Transactions now supported with v4.0</b>
+
 ### Atomic Operations
 This means that when you work on a single document, that the work will be completed before anyone else sees the document ie. they see *all* the changes you make or *none*.
 
