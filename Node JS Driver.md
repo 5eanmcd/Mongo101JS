@@ -13,6 +13,8 @@ When looking to execute an or statement the below is an example to follow:<br>
 `    {"tag_list": {"$regex": options.overview, "$options": "i"}}`<br>
 `];`<br>
 
+`And` Statements are a little more straightforward:<br>
+`query.founded_year = {"$gte": options.firstYear, "$lte": options.lastYear };`
 
 mongoimport is a command that will take a JSON file as an input and load that data to a specified database and collection e.g.
 >mongoimport -d _databaseName_ -c _collectionName_ _fileName_
