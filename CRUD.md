@@ -1,7 +1,7 @@
 
 # CRUD
 
-## Create operations:
+1. Create operations:
 The are 2 specific commands to insert a document to a database collection:
     * insert()
     * insertMany()
@@ -16,7 +16,7 @@ MongoDB Document id is comprised of the following elements in a 12 byte hex stri
     Date|MAC Addr|PID|Counter<br>
     xxxx|xxx|xx|xx
 
-## Read operations:
+2. Read operations:
 
     A typical find command appears as below:<br>
 >db.<\<databaseName>>.find({})
@@ -102,7 +102,7 @@ To allow for a query match based on a regex expression
     This command allow for queries to return data based on the size of an array
 >db.movieDetails.find({ "countries" : { $size: 1} })
 
-## Updating Documents
+3. Updating Documents
 
 * updateOne()
 
