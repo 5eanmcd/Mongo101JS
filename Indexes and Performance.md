@@ -11,6 +11,7 @@ D --> M(Memory)
 M --> C
 D --> C(Disk)
 ```
+![Flowchart](./img/mongoStorageEngine.png)
 
 *All Documents, indexes, metadata data are written to disk by the storage engine.<br>
 The storage engine is also making decisions about what data to hold in memory and what to commit to disk*
