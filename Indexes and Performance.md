@@ -29,7 +29,7 @@ Wired Tiger offers:
 * Management of its own storage
 * No in place update
 
-## Indexes
+## No Indexes
 If you do a search on a collection without and index you will end up querying the entire collection. 
 
 ### Create index command
@@ -43,6 +43,9 @@ For a given collection students, below retrieves all associated indexes:<br>
 ### Delete index command
 For a students collection, below deletes an index:<br>
 `db.students.dropIndex( { "class" : 1, "student_name" : 1 } )`
+
+## Multikey Indexes
+If you create an index using an array field, you create a *multikey* index. One restriction in the use of multikey indexes is that we can't have a compound index with 2 array fields - only one array field is permitted within a compound array.
 
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
