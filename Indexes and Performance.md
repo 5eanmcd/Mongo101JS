@@ -24,7 +24,8 @@ MMAP offers:
 ## Wired Tiger
 
 Wired Tiger offers:
-* Document level concurrency
+* Document level concurrency (as opposed to MMAP collection level locking)
+** Documents aren't locked rather its assumed the application will not write to the same document concurrenty.
 * Management of its own storage
 * No in place update
 
