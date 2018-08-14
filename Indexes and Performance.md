@@ -37,10 +37,12 @@ For a students collection, below creates an index key with the class and and stu
 `db.students.createIndex( { "class" : 1, "student_name" : 1 } )`
 
 ### Retrieve indexes command
-For a given collection students, below retrieves all associated indexes:
+For a given collection students, below retrieves all associated indexes:<br>
 `db.students.getIndexes()`
 
-
+### Delete index command
+For a students collection, below deletes an index:<br>
+`db.students.dropIndex( { "class" : 1, "student_name" : 1 } )`
 
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
