@@ -27,6 +27,19 @@ It might make sense to have keep documents in a seperate collection even if the 
 * we are looking to reduce the working set size of the application.
 * because the combined size of the documents would be larger than 16MB
 
+## One to One relationships
+Entities can be linked across tables programmatically, e.g. an employee may have one resume, one resume may have one employee. Or we can embed an entity within another document e.g. a resume within an employee.
+
+Decisions to be made in terms of schema may be based on:
+1. Frequency of use:
+* How often do we need to view the resume information? 
+2. Size of entities:
+* How large is the resume entity associated with an employee?
+3. Frequency of updates:
+* Is one entity likely to face a lot of updates? More that another? (If so you may not wish to embed).
+4. Consistency of the data:
+If we can't tolerate any inconsistency in the data? So the atomicity includes both entities, you may consider embedding within one document.
+
 ## One to Many relationships
 When we have a genuine one to many relationship e.g. person to city, true linking would appear to the right design decision.
 ```java
