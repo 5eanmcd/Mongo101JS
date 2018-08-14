@@ -1,6 +1,6 @@
-#Indexes
+# Indexes
 
-##New in Mongo 3.0 
+## New in Mongo 3.0 
 Pluggable storage engines
 
 ```mermaid
