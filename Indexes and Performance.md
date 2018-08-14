@@ -32,5 +32,9 @@ Wired Tiger offers:
 ## Indexes
 If you do a search on a collection without and index you will end up querying the entire collection. 
 
+### Create index command
+For a students collection, below creates an index key with the class and and student name fields:
+`db.students.createIndex( { "class" : 1, "student_name" : 1 } )`
+
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
