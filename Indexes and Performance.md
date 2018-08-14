@@ -36,6 +36,9 @@ If you do a search on a collection without and index you will end up querying th
 For a students collection, below creates an index key with the class and and student name fields:<br>
 `db.students.createIndex( { "class" : 1, "student_name" : 1 } )`
 
+#### Create a unique index
+`db.students.createIndex( { "student_name" : 1 }, { unique : true } )`
+
 ### Retrieve indexes command
 For a given collection students, below retrieves all associated indexes:<br>
 `db.students.getIndexes()`
