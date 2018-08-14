@@ -60,3 +60,5 @@ When we have a genuine one to many relationship e.g. person to city, true linkin
 * Improved read performance.
 * Once round trip to the DB.
 
+## Multikey Indexing
+By providing a new index on a table, we enable multikey indexing on the table. We can identify when multikey indexes are used with the explain() function.
