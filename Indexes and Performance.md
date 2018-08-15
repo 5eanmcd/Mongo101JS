@@ -8,6 +8,7 @@ For a students collection, below creates an index key with the class and and stu
 `db.students.createIndex( { "class" : 1, "student_name" : 1 } )`
 
 #### Create a unique index
+The below command creates a unique index for the students collection, it means that the student collection cannot have multiple documents with the same value for student_name.
 `db.students.createIndex( { "student_name" : 1 }, { unique : true } )`
 
 ### Retrieve indexes command
