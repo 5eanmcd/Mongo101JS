@@ -22,5 +22,9 @@ For a students collection, below deletes an index:<br>
 ## Multikey Indexes
 If you create an index using an array field, you create a *multikey* index. One restriction in the use of multikey indexes is that we can't have a compound index with 2 array fields - only one array field is permitted within a compound array.
 
+## Sparse indexes
+If you want to create an index on a collection when the index doesn't exist for certain documents, then you need to create a sparse index. Those documents without this indexed field will not form part of the collection index.<br>
+`db.students.createIndex( { "student_phone" : 1 }, { unique : true, sparse: true } )`
+
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
