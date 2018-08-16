@@ -28,5 +28,9 @@ If you want to create an index on a collection when the index doesn't exist for 
 
 *Note:* Sparse indexes are not used is you wish to sort on that field - rather than an index scan being used a collection scan will be used to read the data.
 
+## Foreground and Background index collection creation.
+The default foreground index collection creation will block all reads and writes to the collection. It is however faster than background index creation. Background index creation is slower, however it doesn't block read / write activity. An alternative to running background index creation (if you have concerns about the performance) is to take one of the DB servers in a replica set and update individually before returning to the replica set.
+
+
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
