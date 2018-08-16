@@ -31,6 +31,9 @@ If you want to create an index on a collection when the index doesn't exist for 
 ## Foreground and Background index collection creation.
 The default foreground index collection creation will block all reads and writes to the collection. It is however faster than background index creation. Background index creation is slower, however it doesn't block read / write activity. An alternative to running background index creation (if you have concerns about the performance) is to take one of the DB servers in a replica set and update individually before returning to the replica set.
 
+## Explain
+To determine how your query/update will execute you can run an explain command as below:<br>
+`db.students.explain().find({ student_name: "Sean"})`
 
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
