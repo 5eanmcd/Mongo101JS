@@ -25,6 +25,7 @@ If you create an index using an array field, you create a *multikey* index. One 
 ## Sparse indexes
 If you want to create an index on a collection when the index doesn't exist for certain documents, then you need to create a sparse index. Those documents without this indexed field will not form part of the collection index.<br>
 `db.students.createIndex( { "student_phone" : 1 }, { unique : true, sparse: true } )`
+*Note:* Sparse indexes are not used is you wish to sort on that field - rather than an index scan being used a collection scan will be used to read the data.
 
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
