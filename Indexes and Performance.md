@@ -58,3 +58,5 @@ Be aware there is a cost to maintaining indexes.
 |Sparse|<=numberOfDocuments|
 |Multikey|>numberOfDocuments|
 
+## Geospatial indexes
+Indexes of this type allow for a `$near` fuction to be executed to identify locations nearest a given point.
