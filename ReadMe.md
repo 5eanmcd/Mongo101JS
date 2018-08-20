@@ -5,5 +5,6 @@
 <li><a href="CRUD.md">CRUD</a></li>
 <li><a href="Node JS Driver.md">Node Driver</a></li>
 <li><a href="Schema Design.md">Schema Design</a></li>
-  <li><a href="Storage Engines.md">Storage Engines</a></li>
+<li><a href="Storage Engines.md">Storage Engines</a></li>
+<li><a href="Indexes and Performance.md">Indexes and Performance.md</a></li>
 </ul>
