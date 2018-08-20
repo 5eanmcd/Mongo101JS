@@ -59,4 +59,9 @@ Be aware there is a cost to maintaining indexes.
 |Multikey|>numberOfDocuments|
 
 ## Geospatial indexes
-Indexes of this type allow for a `$near` fuction to be executed to identify locations nearest a given point.
+Indexes of this type `2d` allow for a *$near* fuction to be executed to identify locations nearest a given point.
+
+## Geospherical indexes
+Indexes of this type allow for Mongo to return documents based on their lat long values. The query below for example returns documents near the lat long -130, 391. Results are limited to those within 1,000 kms of this point.
+`db.stores.find({ loc:{ $near: { $geometry: { type: "Point", coordinates: [-130, 39]}, $maxDistance:1000000 } } })`
+
