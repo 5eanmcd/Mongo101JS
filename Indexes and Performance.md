@@ -36,7 +36,11 @@ To determine how your query/update will execute you can run an explain command a
 `db.students.explain().find({ student_name: "Sean"})`
 
 ## Covered Queries
-A covered query is one which is satisfied entirely with an index and hence zero documents are required to be inspected.
+A covered query is one which is satisfied entirely with an index and hence zero documents are required to be inspected.<br>
 *It may be likely that you have to project out fields in order to ensure Mongo uses a covered query - if there is anu possibility of having to present a value for a key thats not in the index, then Mongo won't just rely on the index and will result in documents being inspected.*
+
+## Cache - query plans
+One Mongo has selected the winning plan for a given query or query pattern, the winning query is stored in the cache for future use. The cache will be updated if there are 1000 writes, index is rebuilt, indexes are added/dropped or finally if the mongod process is restarted.
+
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
