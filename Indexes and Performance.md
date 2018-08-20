@@ -35,5 +35,8 @@ The default foreground index collection creation will block all reads and writes
 To determine how your query/update will execute you can run an explain command as below:<br>
 `db.students.explain().find({ student_name: "Sean"})`
 
+## Covered Queries
+A covered query is one which is satisfied entirely with an index and hence zero documents are required to be inspected.
+*It may be likely that you have to project out fields in order to ensure Mongo uses a covered query - if there is anu possibility of having to present a value for a key thats not in the index, then Mongo won't just rely on the index and will result in documents being inspected.*
 If using MMAP, an index will use a BTree to store the indexes and speed up the searches.
 
