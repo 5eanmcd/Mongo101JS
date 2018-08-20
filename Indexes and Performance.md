@@ -49,3 +49,12 @@ If using MMAP, an index will use a BTree to store the indexes and speed up the s
 ### WiredTiger
 WiredTiger suppors a few different types of compression, one of which called prefix suppression allows us to have smaller indexes.
 
+## Number of Index Entries
+Be aware there is a cost to maintaining indexes. 
+
+|                |Number of Indexes|
+|----------------|--------------|
+|Regular|1:1|
+|Sparse|<=numberOfDocuments|
+|Multikey|>numberOfDocuments|
+
