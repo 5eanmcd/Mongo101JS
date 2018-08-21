@@ -65,3 +65,8 @@ Indexes of this type `2d` allow for a *$near* fuction to be executed to identify
 Indexes of this type allow for Mongo to return documents based on their lat long values. The query below for example returns documents near the lat long -130, 391. Results are limited to those within 1,000 kms of this point.<br>
 `db.stores.find({ loc:{ $near: { $geometry: { type: "Point", coordinates: [-130, 39]}, $maxDistance:1000000 } } })`
 
+## Text indexes
+
+Using an index type of text as below will allow for word search queries to be executed: 
+`db.mycollection.ensureIndex({ 'fieldname' : 'text' })`
+
