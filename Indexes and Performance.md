@@ -67,6 +67,8 @@ Indexes of this type allow for Mongo to return documents based on their lat long
 
 ## Text indexes
 
-Using an index type of text as below will allow for word search queries to be executed: 
+Using an index type of text as below will allow for word search queries to be executed: <br>
 `db.mycollection.ensureIndex({ 'fieldname' : 'text' })`
+The query below will now search the index for and text fields with the word dog.<br>
+`db.mycollection.find({ $text : {$search: "dog" } })`
 
