@@ -16,6 +16,8 @@ MongoDB Document id is comprised of the following elements in a 12 byte hex stri
     Date|MAC Addr|PID|Counter<br>
     xxxx|xxx|xx|xx
 
+Note: The _id field of a document is immutable.
+
 2. Read operations:
 
     A typical find command appears as below:<br>
